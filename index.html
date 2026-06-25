@@ -7,7 +7,15 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Dragon Warrior" />
   <meta name="theme-color" content="#0D0F14" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Dragon Warrior" />
   <title>Dragon Warrior</title>
+
+  <!-- Inline SVG icon as data URI for Android -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%230D0F14'/%3E%3Ccircle cx='256' cy='256' r='240' fill='none' stroke='%23C8A96E' stroke-width='4' opacity='0.3'/%3E%3Ctext x='256' y='340' font-size='280' text-anchor='middle' dominant-baseline='middle'%3E%F0%9F%90%89%3C/text%3E%3C/svg%3E" />
+
+  <!-- Android PWA Manifest (inline as data URI) -->
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Dragon+Warrior+Training%22%2C%22short_name%22%3A%22Dragon+Warrior%22%2C%22description%22%3A%22Your+daily+warrior+training+tracker%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230D0F14%22%2C%22theme_color%22%3A%22%230D0F14%22%2C%22orientation%22%3A%22portrait%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg+xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'+viewBox%3D'0+0+512+512'%253E%253Crect+width%3D'512'+height%3D'512'+rx%3D'100'+fill%3D'%25230D0F14'%2F%253E%253Ctext+x%3D'256'+y%3D'310'+font-size%3D'320'+text-anchor%3D'middle'%253E%25F0%259F%2590%25A9%253C%2Ftext%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any+maskable%22%7D%5D%7D" />
   <style>
     html, body, #root {
       margin: 0; padding: 0;
