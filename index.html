@@ -169,7 +169,7 @@ function PracticePanel({ pillar, existingPractices, onSave, onClose }) {
   const isEmpty = selected.size === 0;
 
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 300, background: "rgba(8,10,14,0.95)", backdropFilter: "blur(8px)", display: "flex", flexDirection: "column", overflowY: "auto" }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 300, background: "rgba(8,10,14,0.95)", backdropFilter: "blur(8px)", display: "flex", flexDirection: "column", overflowY: "auto", paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 24px 20px" }}>
         <div>
           <div style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "0.3em", color: pillar.color, opacity: 0.7, textTransform: "uppercase", marginBottom: 4 }}>Log Practice</div>
@@ -228,7 +228,7 @@ function StatsModal({ data, streak, onClose, onReset }) {
   const rankProgress = nextRank ? (totalDays - rank.min) / (nextRank.min - rank.min) : 1;
 
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(8,10,14,0.97)", backdropFilter: "blur(8px)", display: "flex", flexDirection: "column", overflowY: "auto", padding: "0 0 40px" }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(8,10,14,0.97)", backdropFilter: "blur(8px)", display: "flex", flexDirection: "column", overflowY: "auto", paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 24px 24px" }}>
         <h2 style={{ fontFamily: "'Cinzel', serif", fontSize: 20, fontWeight: 700, color: "#C8A96E", letterSpacing: "0.06em" }}>Chronicle</h2>
         <button onClick={onClose} style={{ background: "none", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, padding: "8px 14px", cursor: "pointer", color: "#9A8E77", fontSize: 11, fontFamily: "'Cinzel', serif", letterSpacing: "0.1em" }}>Close</button>
@@ -348,7 +348,7 @@ function CreedScreen({ onClose }) {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "#0A0C10", backgroundImage: SCALE_BG, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "40px 32px" }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "#0A0C10", backgroundImage: SCALE_BG, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "env(safe-area-inset-top) 32px env(safe-area-inset-bottom)" }}>
       <div style={{ fontSize: 48, marginBottom: 32, filter: "drop-shadow(0 0 24px #C8A96E)" }}>🐉</div>
       <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 340, width: "100%", marginBottom: 48 }}>
         {CREED.map((line, i) => (
@@ -416,7 +416,7 @@ function FocusOverlay({ data, setData, today, todayKey, onClose }) {
   const phaseColor = phase === "rest" ? "#5B8FD4" : phase === "done" ? "#C8A96E" : activePillar?.color || "#C8A96E";
 
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(8,10,14,0.97)", backdropFilter: "blur(8px)", overflowY: "auto", paddingBottom: 40 }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(8,10,14,0.97)", backdropFilter: "blur(8px)", overflowY: "auto", paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 24px 20px" }}>
         <div>
           <div style={{ fontFamily: "'Cinzel', serif", fontSize: 9, letterSpacing: "0.35em", color: "#C8A96E", opacity: 0.7, marginBottom: 4, textTransform: "uppercase" }}>Ultradian</div>
